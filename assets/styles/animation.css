@@ -1,0 +1,64 @@
+.animate_pan {
+    animation: animate_pan .45s;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate_pan {
+    0%   { width:0px; }
+    100% {  width: 750px; }
+}
+
+
+.panel.animate_pan::after {
+    animation: animate_pan_after .45s;
+    animation-delay: .30s;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate_pan_after {
+    0%   { opacity: 0; }
+    100% {  opacity: 1; }
+}
+
+.panel.animate_pan .score {
+    animation: animate_score .10s;
+    animation-delay: .45s;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate_score {
+    0%   { opacity: 0; }
+    100% {  opacity: 1; }
+}
+
+.panel.animate_pan .flag {
+    animation: animate_flag .10s;
+    animation-delay: .45s;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate_flag {
+    0%   { opacity: 0; }
+    100% {  opacity: 1; }
+}
+
+.panel.animate_pan .name {
+    animation: animate_name .10s;
+    animation-delay: .45s;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate_name {
+    0%   { transform: scale(0); }
+    100% {  transform: scale(1); }
+}

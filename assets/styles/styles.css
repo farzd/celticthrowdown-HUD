@@ -1,0 +1,111 @@
+body {
+    background: url('../images/bg.jpg') no-repeat;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    position: relative;
+    font-family: Helvetica;
+}
+
+.panel {
+    width: 0px;
+    height: 47px;
+    position: absolute;
+    top: 29px;
+}
+
+.panelL {
+    background: linear-gradient(to left, rgba(20,79,159,1) 0%, rgba(20,79,159,1) 40%, rgba(20,79,159,0.05) 100%);
+    left: 77px;
+}
+
+.panelR {
+    background: linear-gradient(to right, rgba(20,79,159,1) 0%,  rgba(20,79,159,1) 40%, rgba(20,79,159,0.05) 100%);
+    right: 77px;
+}
+
+.panel::after {
+    content: "";
+    width: 743px;
+    height: 40px;
+    position: absolute;
+    z-index: 2;
+    top: 2px;
+    opacity: 0;
+}
+
+.panelL::after {
+    left: 2px;
+    background: linear-gradient(to left, rgba(23,118,202,1) 0%,rgba(23,118,202,0.01) 100%);
+}
+
+.panelR::after {
+    right: 2px;
+    background: linear-gradient(to right, rgba(23,118,202,1) 0%,rgba(23,118,202,0.01) 100%);
+}
+
+
+.text {
+    color: #fff;
+    font-size: 31px;
+    text-align: center;
+    line-height: 42px;
+    font-weight: bold;  
+}
+
+.score {
+    height: 40px;
+    width: 50px;
+    background: rgba(20,79,159,1);
+    position: absolute;
+    top: 2px;
+    z-index: 3;
+    text-shadow: 2px 2px #1776ca; 
+    opacity: 0;
+}
+
+.panelR .score {
+    padding-right: 3px;
+    left: 5px;
+}
+.panelL .score {
+    padding-left: 3px;
+    right: 5px;
+}
+
+.name {
+    position: absolute;
+    top: 2px;
+    font-size: 28px;
+    letter-spacing: 3px;
+    font-style: italic; 
+    z-index: 3; 
+    text-shadow: 4px 4px #144f9e;
+    transform: scale(0);
+}
+
+.panelR .name {
+    left: 129px;
+}
+.panelL .name {
+    right: 129px;
+}
+
+.flag {
+    position: absolute;
+    z-index: 3;
+    top: 4px;
+    opacity: 0;
+}
+
+.panelR .flag {
+    left: 61px;
+}
+.panelL .flag {
+    right: 61px;
+}
+
+.flag img {
+    width: 53px;
+    height: 35px;    
+}
