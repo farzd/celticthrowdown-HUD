@@ -1,5 +1,5 @@
 .animate_pan {
-    animation: animate_pan .45s;
+    animation: animate_pan .55s;
     animation-direction: normal;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
@@ -13,7 +13,7 @@
 
 .panel.animate_pan::after {
     animation: animate_pan_after .45s;
-    animation-delay: .30s;
+    animation-delay: .70s;
     animation-direction: normal;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
@@ -26,7 +26,7 @@
 
 .panel.animate_pan .score {
     animation: animate_score .10s;
-    animation-delay: .45s;
+    animation-delay: .65s;
     animation-direction: normal;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
@@ -38,8 +38,8 @@
 }
 
 .panel.animate_pan .flag {
-    animation: animate_flag .10s;
-    animation-delay: .45s;
+    animation: animate_flag .20s;
+    animation-delay: .75s;
     animation-direction: normal;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
@@ -51,14 +51,28 @@
 }
 
 .panel.animate_pan .name {
-    animation: animate_name .10s;
-    animation-delay: .45s;
+    animation: animate_name .15s;
+    animation-delay: .85s;
     animation-direction: normal;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 
 @keyframes animate_name {
+    0%   { transform: scale(0); }
+    100% {  transform: scale(1); }
+}
+
+
+.panelT.animate_panT .title {
+    animation: animate_titleT .30s;
+    animation-delay: 1s;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate_titleT {
     0%   { transform: scale(0); }
     100% {  transform: scale(1); }
 }

@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    <div class="panelT">
+        <span class="title">WINNERS SEMIS</span>
+    </div>
+    
     <div class="panel panelL">
         <span class="text name">JUSTIN WONG</span>
         <span class="text score">1</span>
@@ -17,33 +21,15 @@
         </span>
     </div>
 
-
-
     <div class="panel panelR">
-            <span class="text name">LOUFFY</span>
-            <span class="text score">1</span>
-            <span class="flag">
-                    <img src="./assets/images/flags/flat/FR.png">
-                </span>
-            </span>
-        </div>
-
+        <span class="text name">LOUFFY</span>
+        <span class="text score">1</span>
+        <span class="flag">
+            <img src="./assets/images/flags/flat/FR.png">
+        </span>
+        </span>
+    </div>
 
     <script src="assets/scripts/index.js"></script>
-    <script>
-        function addClass(el, className) {
-            if (el.classList) { el.classList.add(className); }
-            else { el.className += ' ' + className; }
-        }
-
-        var panelL = document.querySelectorAll('.panelL')[0];
-        var panelR = document.querySelectorAll('.panelR')[0];
-        document.getElementsByTagName('body')[0].addEventListener('click' , function () {
-            addClass(panelL, 'animate_pan')
-            addClass(panelR, 'animate_pan')
-        });
-
-
-    </script>
 </body>
 </html>
