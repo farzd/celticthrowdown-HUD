@@ -1,7 +1,7 @@
 .animate_pan {
-    animation: animate_pan .55s;
+    animation: animate_pan .85s;
     animation-direction: normal;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
 
@@ -15,7 +15,7 @@
     animation: animate_pan_after .45s;
     animation-delay: .70s;
     animation-direction: normal;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
 
@@ -28,7 +28,7 @@
     animation: animate_score .10s;
     animation-delay: .65s;
     animation-direction: normal;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
 
@@ -38,10 +38,10 @@
 }
 
 .panel.animate_pan .flag {
-    animation: animate_flag .20s;
-    animation-delay: .75s;
+    animation: animate_flag .40s;
+    animation-delay: 1s;
     animation-direction: normal;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
 
@@ -51,28 +51,40 @@
 }
 
 .panel.animate_pan .name {
-    animation: animate_name .15s;
-    animation-delay: .85s;
+    animation: animate_name .60s;
+    animation-delay: 1.2s;
     animation-direction: normal;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 
 @keyframes animate_name {
-    0%   { transform: scale(0); }
-    100% {  transform: scale(1); }
+    0%   { transform: scale(0); opacity:0; }
+    100% {  transform: scale(1); opacity:1; }
 }
 
 
-.panelT.animate_panT .title {
-    animation: animate_titleT .30s;
-    animation-delay: 1s;
+.panelT.animate_panT {
+    animation: animate_panT .40s;
+    animation-delay: 2s;
     animation-direction: normal;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes animate_panT {
+    0%   { height: 0px; }
+    100% {  height: 25px; }
+}
+
+.panelT.animate_panT .title {
+    animation: animate_titleT .50s;
+    animation-delay: 2.2s;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
 
 @keyframes animate_titleT {
-    0%   { transform: scale(0); }
-    100% {  transform: scale(1); }
+    0%   { transform: scale(0); opacity:0; }
+    100% {  transform: scale(1); opacity:1; }
 }
