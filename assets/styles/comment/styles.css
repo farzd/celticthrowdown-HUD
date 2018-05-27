@@ -25,7 +25,7 @@ body {
 
 .panelL {
     background: linear-gradient(to left, rgba(20,79,159,1) 0%, rgba(20,79,159,1) 40%, rgba(20,79,159,0.05) 100%);
-    left: 77px;
+    left: -875px;
     transform: skewX(-44deg);
     text-align: right;
     z-index: 1;
@@ -33,10 +33,10 @@ body {
 
 .panelR {
     background: linear-gradient(to right, rgba(20,79,159,1) 0%,  rgba(20,79,159,1) 40%, rgba(20,79,159,0.05) 100%);
+    right: -875px;
     transform: skewX(44deg);
     text-align: left;
-    z-index: 1;    
-    right: 77px;
+    z-index: 1;
 }
 
 .panelL::after {
@@ -67,17 +67,21 @@ body {
     font-size: 70px;
     letter-spacing: 3px;
     font-weight: bold;
-    text-shadow: 4px 4px #144f9e;
+    text-shadow: 6px 6px #144f9e;
     position: relative;
     z-index: 3;
 }
 
 .panelL .name {
     margin: 15px 150px 0 0;
+    left: -850px;
+    opacity: 0;
 }
 
 .panelR .name {
-    margin: 10px 0 0 150px;
+    margin: 15px 0 0 150px;
+    right: -850px;
+    opacity: 0;    
 }
 
 .footer {
@@ -90,10 +94,12 @@ body {
 }
 
 .panelL .footer {
+    left: -875px;
     background: linear-gradient(to left, rgba(20,79,159,1) 0%, rgba(20,79,159,1) 40%, rgba(20,79,159,0.05) 100%);
 }
 
 .panelR .footer {
+    right: -875px;
     background: linear-gradient(to right, rgba(20,79,159,1) 0%, rgba(20,79,159,1) 40%, rgba(20,79,159,0.05) 100%);
 }
 
@@ -106,10 +112,11 @@ body {
 .panelL .footer .twitter {
     margin: 10px 110px 0 0;
     transform: skewX(44deg);
+    opacity: 0;
 }
 
 .panelR .footer .twitter {
-    margin: 10px 0 0 100px;
+    margin: 10px 0 0 110px;
     transform: skewX(-44deg);
 }
 
@@ -134,10 +141,12 @@ body {
 
 .triangle {
     position: absolute;
-    bottom: 200px;
+    bottom: 0;
     left: calc(50% - 120px);
     width: 0; 
     height: 0; 
+    opacity: 0;
+    z-index: 2;
     border-left: 120px solid transparent;
     border-right: 120px solid transparent;
     border-bottom: 120px solid #144f9e;
@@ -150,7 +159,7 @@ body {
     position: absolute;
     left: -100px;
     top: 8px;
-    z-index: 2;
+    z-index: 3;
     border-left: 100px solid transparent;
     border-right: 100px solid transparent;
     border-bottom: 105px solid #1976ca
@@ -160,6 +169,7 @@ body {
     position: absolute;
     top: -150px;
     left: -240px;
-    z-index: 3;
-    transform: scale(.5);
+    z-index: 4;
+    transform: scale(0);
+    opacity: 0;
   }
