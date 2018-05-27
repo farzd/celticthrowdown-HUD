@@ -6,8 +6,8 @@
 }
 
 @keyframes animate_pan {
-    0%   { width:0px; }
-    100% {  width: 750px; }
+    0%   { width: 0; opacity: 0;}
+    100% {  width: 750px; opacity: 1;}
 }
 
 
@@ -39,7 +39,7 @@
 
 .panel.animate_pan .flag {
     animation: animate_flag .40s;
-    animation-delay: 1s;
+    animation-delay: .8s;
     animation-direction: normal;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
@@ -52,7 +52,7 @@
 
 .panel.animate_pan .name {
     animation: animate_name .60s;
-    animation-delay: 1.2s;
+    animation-delay: 1s;
     animation-direction: normal;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
@@ -72,8 +72,8 @@
     animation-fill-mode: forwards;
 }
 @keyframes animate_panT {
-    0%   { height: 0px; }
-    100% {  height: 25px; }
+    0%   { height: 0px; top:-4px }
+    100% {  height: 25px; top: 0;}
 }
 
 .panelT.animate_panT .title {
@@ -87,4 +87,21 @@
 @keyframes animate_titleT {
     0%   { transform: scale(0); opacity:0; }
     100% {  transform: scale(1); opacity:1; }
+}
+
+.logo.animate_logo {
+    animation: animate_logo 6s;
+    animation-delay: 3s;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate_logo {
+    0%   { opacity: 0; }
+    10%   { opacity: 1; }
+    20%   { transform: rotateY(0deg); opacity: 1;}
+    50% {  transform: rotateY(180deg);  opacity: 1;}
+    80% {  transform: rotateY(0deg); opacity: 1; }
+    100%   { opacity: 0; }
 }
