@@ -9,18 +9,18 @@ body {
 
 .panel {
     width: 810px;
-    height: 97px;
+    height: 130px;
     position: absolute;
-    bottom: 300px;
+    bottom: 200px;
 }
 
 .panel::after {
     content: "";
     width: 800px;
-    height: 90px;
+    height: 120px;
     position: absolute;
+    top: 5px;
     z-index: 2;
-    top: 2px;
 }
 
 .panelL {
@@ -64,7 +64,7 @@ body {
 }
 
 .name {
-    font-size: 47px;
+    font-size: 70px;
     letter-spacing: 3px;
     font-weight: bold;
     text-shadow: 4px 4px #144f9e;
@@ -73,16 +73,16 @@ body {
 }
 
 .panelL .name {
-    margin: 10px 100px 0 0;
+    margin: 15px 150px 0 0;
 }
 
 .panelR .name {
-    margin: 10px 0 0 100px;
+    margin: 10px 0 0 150px;
 }
 
 .footer {
     width: 100%;
-    height: 35px;
+    height: 40px;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -98,24 +98,25 @@ body {
 }
 
 .footer .twitter {
+    font-size: 20px;
     letter-spacing: 1px;
     position: relative;
 }
 
 .panelL .footer .twitter {
-    margin: 10px 70px 0 0;
+    margin: 10px 110px 0 0;
     transform: skewX(44deg);
 }
 
 .panelR .footer .twitter {
-    margin: 10px 0 0 70px;
+    margin: 10px 0 0 100px;
     transform: skewX(-44deg);
 }
 
 .footer .twitter::after {
     content:"";
     position: absolute;
-    top: -8px;
+    top: -7px;
     width: 41px;
     height: 32px;
     background: url('../../images/twitter.png') no-repeat;
@@ -123,23 +124,23 @@ body {
 }
 
 .panelL .footer .twitter:after {
-    left: -35px;
+    left: -40px;
 }
 
 .panelR .footer .twitter:after {
-    right: -35px;
+    right: -40px;
 }
 
 
 .triangle {
     position: absolute;
-    bottom: 300px;
-    left: calc(50% - 97px);
+    bottom: 200px;
+    left: calc(50% - 120px);
     width: 0; 
     height: 0; 
-    border-left: 97px solid transparent;
-    border-right: 97px solid transparent;
-    border-bottom: 97px solid #144f9e;
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    border-bottom: 120px solid #144f9e;
   }
   
   .triangle:after {
@@ -147,18 +148,18 @@ body {
     width: 0;
     height: 0;    
     position: absolute;
-    left: -90px;
+    left: -100px;
     top: 8px;
     z-index: 2;
-    border-left: 90px solid transparent;
-    border-right: 90px solid transparent;
-    border-bottom: 86px solid #1976ca
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 105px solid #1976ca
   }
 
   .logo {
     position: absolute;
-    top: -57px;
-    left: -110px;
+    top: -150px;
+    left: -240px;
     z-index: 3;
-    transform: scale(0.7);
+    transform: scale(.5);
   }
