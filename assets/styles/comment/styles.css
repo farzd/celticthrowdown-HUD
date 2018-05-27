@@ -1,0 +1,164 @@
+body {
+    background: url('../../images/bg_comment.jpg') no-repeat;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    position: relative;
+    font-family: Helvetica;
+}
+
+.panel {
+    width: 810px;
+    height: 97px;
+    position: absolute;
+    bottom: 300px;
+}
+
+.panel::after {
+    content: "";
+    width: 800px;
+    height: 90px;
+    position: absolute;
+    z-index: 2;
+    top: 2px;
+}
+
+.panelL {
+    background: linear-gradient(to left, rgba(20,79,159,1) 0%, rgba(20,79,159,1) 40%, rgba(20,79,159,0.05) 100%);
+    left: 77px;
+    transform: skewX(-44deg);
+    text-align: right;
+    z-index: 1;
+}
+
+.panelR {
+    background: linear-gradient(to right, rgba(20,79,159,1) 0%,  rgba(20,79,159,1) 40%, rgba(20,79,159,0.05) 100%);
+    transform: skewX(44deg);
+    text-align: left;
+    z-index: 1;    
+    right: 77px;
+}
+
+.panelL::after {
+    left: 2px;
+    background: linear-gradient(to left, rgba(23,118,202,1) 0%,rgba(23,118,202,0.01) 100%);
+}
+
+.panelR::after {
+    right: 2px;
+    background: linear-gradient(to right, rgba(23,118,202,1) 0%,rgba(23,118,202,0.01) 100%);
+}
+
+.text {
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.panelL .text {
+    transform: skewX(35deg);
+}
+
+.panelR .text {
+    transform: skewX(-35deg);
+}
+
+.name {
+    font-size: 47px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-shadow: 4px 4px #144f9e;
+    position: relative;
+    z-index: 3;
+}
+
+.panelL .name {
+    margin: 10px 100px 0 0;
+}
+
+.panelR .name {
+    margin: 10px 0 0 100px;
+}
+
+.footer {
+    width: 100%;
+    height: 35px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+}
+
+.panelL .footer {
+    background: linear-gradient(to left, rgba(20,79,159,1) 0%, rgba(20,79,159,1) 40%, rgba(20,79,159,0.05) 100%);
+}
+
+.panelR .footer {
+    background: linear-gradient(to right, rgba(20,79,159,1) 0%, rgba(20,79,159,1) 40%, rgba(20,79,159,0.05) 100%);
+}
+
+.footer .twitter {
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.panelL .footer .twitter {
+    margin: 10px 70px 0 0;
+    transform: skewX(44deg);
+}
+
+.panelR .footer .twitter {
+    margin: 10px 0 0 70px;
+    transform: skewX(-44deg);
+}
+
+.footer .twitter::after {
+    content:"";
+    position: absolute;
+    top: -8px;
+    width: 41px;
+    height: 32px;
+    background: url('../../images/twitter.png') no-repeat;
+    transform: scale(0.5);
+}
+
+.panelL .footer .twitter:after {
+    left: -35px;
+}
+
+.panelR .footer .twitter:after {
+    right: -35px;
+}
+
+
+.triangle {
+    position: absolute;
+    bottom: 300px;
+    left: calc(50% - 97px);
+    width: 0; 
+    height: 0; 
+    border-left: 97px solid transparent;
+    border-right: 97px solid transparent;
+    border-bottom: 97px solid #144f9e;
+  }
+  
+  .triangle:after {
+    content: "";
+    width: 0;
+    height: 0;    
+    position: absolute;
+    left: -90px;
+    top: 8px;
+    z-index: 2;
+    border-left: 90px solid transparent;
+    border-right: 90px solid transparent;
+    border-bottom: 86px solid #1976ca
+  }
+
+  .logo {
+    position: absolute;
+    top: -57px;
+    left: -110px;
+    z-index: 3;
+    transform: scale(0.7);
+  }
