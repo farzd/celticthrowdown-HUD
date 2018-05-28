@@ -1,6 +1,6 @@
 <!DOCTYPE StreamControl>
 <items>
- <timestamp>1479335663</timestamp>
+ <timestamp>1479335662223</timestamp>
  <gameStatus></gameStatus>
  <mText1></mText1>
  <mText2></mText2>
@@ -8,9 +8,9 @@
  <pCountry2>Ireland</pCountry2>
  <pLabel1></pLabel1>
  <pLabel2></pLabel2>
- <pName1>KingofLegend</pName1>
- <pName2>Bengay </pName2>
- <pScore1>2</pScore1>
+ <pName1>Johnny</pName1>
+ <pName2>ASSIST </pName2>
+ <pScore1>0</pScore1>
  <pScore2>0</pScore2>
  <game></game>
 </items>
