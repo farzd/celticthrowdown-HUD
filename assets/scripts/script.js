@@ -1,5 +1,22 @@
 const system = {
     timeStamp: 0,
+    init: function() {
+        _.removeClass(_.$('.panelL'), 'animate_pan');
+        _.removeClass(_.$('.panelR'), 'animate_pan');
+        _.removeClass(_.$('.panelT'), 'animate_panT');
+        _.removeClass(_.$('.logo'), 'animate_logo');
+
+        setTimeout(function () {
+            _.addClass(_.$('.panelL'), 'animate_pan');
+            _.addClass(_.$('.panelR'), 'animate_pan');
+            _.addClass(_.$('.panelT'), 'animate_panT');
+            _.addClass(_.$('.logo'), 'animate_logo');
+        }, 500)
+        
+        window.setInterval(function() {
+            system.update();
+        }, 500);        
+    },
     connect: function () {
         return new Promise(function (resolve, reject) {
             let xhr = new XMLHttpRequest();
@@ -35,10 +52,6 @@ const system = {
 
             if (timestamp !== system.timeStamp) {
                 system.timeStamp = timestamp;
-                _.removeClass(_.$('.panelL'), 'animate_pan');
-                _.removeClass(_.$('.panelR'), 'animate_pan');
-                _.removeClass(_.$('.panelT'), 'animate_panT');
-                _.removeClass(_.$('.logo'), 'animate_logo');
 
                 _.$('.panelL .name').innerHTML = pName1;
                 _.$('.panelR .name').innerHTML = pName2;
@@ -50,13 +63,6 @@ const system = {
 
                 _.$('.panelL .flag img').src = './assets/images/flags/flat/' + pCountry1 + '.png'
                 _.$('.panelR .flag img').src = './assets/images/flags/flat/' + pCountry2 + '.png'
-        
-                setTimeout(function () {
-                    _.addClass(_.$('.panelL'), 'animate_pan');
-                    _.addClass(_.$('.panelR'), 'animate_pan');
-                    _.addClass(_.$('.panelT'), 'animate_panT');
-                    _.addClass(_.$('.logo'), 'animate_logo');
-                }, 500)
             }
         });
     }
@@ -99,7 +105,4 @@ const _ = {
     }
 }
 
-
-window.setInterval(function() {
-    system.update();
-}, 500);
+system.init();
