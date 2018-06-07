@@ -11,11 +11,13 @@ const system = {
             _.addClass(_.$('.panelR'), 'animate_pan');
             _.addClass(_.$('.panelT'), 'animate_panT');
             _.addClass(_.$('.logo'), 'animate_logo');
-        }, 500)
+        }, 100)
+
+        system.update(true);
         
         window.setInterval(function() {
             system.update();
-        }, 500);        
+        }, 500);          
     },
     connect: function () {
         return new Promise(function (resolve, reject) {
@@ -46,12 +48,22 @@ const system = {
             };
         })
     },
-    update: function() {
+    update: function(init) {
         system.connect().then((result)=> {
             const { pName1, pName2, pScore1, pScore2, pCountry1, pCountry2, pLabel1, pLabel2, game, gameStatus, timestamp } = result;
 
             if (timestamp !== system.timeStamp) {
                 system.timeStamp = timestamp;
+
+                if(!init) {
+                    _.addClass(_.$('.panelL .name'), 'fade');
+                    _.addClass(_.$('.panelL .score'), 'fade');
+                    _.addClass(_.$('.panelL .flag'), 'fade');
+
+                    _.addClass(_.$('.panelR .name'), 'fade');
+                    _.addClass(_.$('.panelR .score'), 'fade');
+                    _.addClass(_.$('.panelR .flag'), 'fade');
+                }
 
                 _.$('.panelL .name').innerHTML = pName1;
                 _.$('.panelR .name').innerHTML = pName2;
@@ -63,6 +75,20 @@ const system = {
 
                 _.$('.panelL .flag img').src = './assets/images/flags/flat/' + pCountry1 + '.png'
                 _.$('.panelR .flag img').src = './assets/images/flags/flat/' + pCountry2 + '.png'
+
+                if(!init) {
+                    setTimeout(()=> {
+                        _.removeClass(_.$('.panelL .name'), 'fade');
+                        _.removeClass(_.$('.panelL .score'), 'fade');
+                        _.removeClass(_.$('.panelL .flag'), 'fade');
+
+                        _.removeClass(_.$('.panelR .name'), 'fade');
+                        _.removeClass(_.$('.panelR .score'), 'fade');
+                        _.removeClass(_.$('.panelR .flag'), 'fade');
+                    }, 50)
+                }
+
+
             }
         });
     }
