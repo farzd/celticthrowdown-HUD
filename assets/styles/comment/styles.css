@@ -23,6 +23,17 @@ html, body {
     z-index: 2;
 }
 
+.panel::before {
+    content: "";
+    width: 800px;
+    height: 120px;
+    background: url(../../images/carbon-fibre-pattern.png);
+    position: absolute;
+    top: 5px;
+    z-index: 3;
+    opacity: 0.9;
+}
+
 .panelL {
     background: linear-gradient(to left, rgba(20,79,159,1) 0%, rgba(20,79,159,1) 40%, rgba(20,79,159,0.05) 100%);
     left: -875px;
@@ -48,6 +59,17 @@ html, body {
     right: 2px;
     background: linear-gradient(to right, rgba(23,118,202,1) 0%,rgba(23,118,202,0.01) 100%);
 }
+
+.panelL::before {
+    left: 10px;
+    transform: skewX(44deg);
+}
+
+.panelR::before {
+    right: -10px;
+    transform: skewX(-44deg);
+}
+
 
 .text {
     display: inline-block;

@@ -68,6 +68,25 @@ html, body {
     background: linear-gradient(to right, rgba(23,118,202,1) 0%,rgba(23,118,202,0.01) 100%);
 }
 
+.panel::before {
+    content: "";
+    width: 600px;
+    height: 40px;
+    background: url(../../images/carbon-fibre-pattern.png);
+    position: absolute;
+    top: 2px;
+    z-index: 3;
+    opacity: 0.6;
+}
+
+.panelL::before {
+    left: 125px;
+}
+
+.panelR::before {
+    left: 25px;
+}
+
 .text {
     color: #fff;
     font-size: 31px;
