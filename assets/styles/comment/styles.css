@@ -1,5 +1,6 @@
 html, body {
     /* background: url('../../images/bg_comment.jpg') no-repeat; */
+    background: transparent;
     width: 1920px;
     height: 1080px;
     overflow: hidden;
