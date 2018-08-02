@@ -9,13 +9,11 @@ const system = {
             xhr.onload = function () {
                 xmlDoc = xhr.responseXML;
                 let getValueFromTag = _.getValueFromTag;
-                let pName1 = getValueFromTag(xmlDoc, 'cName1');
-                let pName2 = getValueFromTag(xmlDoc, 'cName2');
-                let pTwitter1 = getValueFromTag(xmlDoc, 'cTwitter1');
-                let pTwitter2 = getValueFromTag(xmlDoc, 'cTwitter2');
+                let pName1 = getValueFromTag(xmlDoc, 'zNewsHeading');
+                let pTwitter1 = getValueFromTag(xmlDoc, 'zNewsText');
                 let timestamp = getValueFromTag(xmlDoc, 'timestamp');
 
-                resolve({ pName1, pName2, pTwitter1, pTwitter2, timestamp })
+                resolve({ pName1, pTwitter1, timestamp })
             }
             xhr.onerror = function () {
                 reject(xhr.response);
@@ -24,27 +22,18 @@ const system = {
     },
     update: function() {
         system.connect().then((result)=> {
-            const { pName1, pName2, pTwitter1, pTwitter2, timestamp } = result;
+            const { pName1, pTwitter1, timestamp } = result;
 
             if (timestamp !== system.timeStamp) {
                 system.timeStamp = timestamp;
                 _.removeClass(_.$('.panelL'), 'animate_pan');
-                _.removeClass(_.$('.panelR'), 'animate_pan');
-                _.removeClass(_.$('.triangle'), 'animate_triangle');
-                _.removeClass(_.$('.logo'), 'animate_logo');
 
                 _.$('.panelL .name').innerHTML = pName1;
-                _.$('.panelR .name').innerHTML = pName2;
-        
                 _.$('.panelL .twitter').innerHTML = pTwitter1;
-                _.$('.panelR .twitter').innerHTML = pTwitter2;
-    
+        
         
                 setTimeout(function () {
                     _.addClass(_.$('.panelL'), 'animate_pan');
-                    _.addClass(_.$('.panelR'), 'animate_pan');
-                    _.addClass(_.$('.triangle'), 'animate_triangle');
-                    _.addClass(_.$('.logo'), 'animate_logo');
                 }, 500)
             }
         });

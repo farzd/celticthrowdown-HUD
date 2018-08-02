@@ -1,0 +1,114 @@
+.panelL.animate_pan {
+    animation: animate_panL .35s;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate_panL {
+    0%   { left: -875px;}
+    100% { left: 77px; }
+}
+
+.panelR.animate_pan {
+    animation: animate_panR .35s;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate_panR {
+    0%   { right: -875px;}
+    100% { right: 77px; }
+}
+
+.panelL.animate_pan .footer {
+    animation: animate_footerL .35s;
+    animation-delay: .20s;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate_footerL {
+    0%   { left: -875px; }
+    100% { left: 0; }
+}
+
+.panelR.animate_pan .footer {
+    animation: animate_footerR .35s;
+    animation-delay: .20s;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate_footerR {
+    0%   { right: -875px; }
+    100% { right: 0; }
+}
+
+.animate_pan .footer .twitter {
+    animation: animate_twitter .20s;
+    animation-delay: .40s;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate_twitter {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.panelL.animate_pan .name {
+    animation: animate_nameL .10s;
+    animation-delay: .25s;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate_nameL {
+    0%   { left: -875px; opacity: 0; }
+    100% { left: 0; opacity: 1; }
+}
+
+.panelR.animate_pan .name {
+    animation: animate_nameR .10s;
+    animation-delay: .25s;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate_nameR {
+    0%   { right: -875px; opacity: 0; }
+    100% { right: 0; opacity: 1; }
+}
+
+.triangle.animate_triangle{
+    animation: animate_triangle .10s;
+    animation-delay: .25s;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate_triangle {
+    0%   { bottom:0; opacity: 0; }
+    100% { bottom: 200px; opacity: 1; }
+}
+
+.logo.animate_logo{
+    animation: animate_logo .30s;
+    animation-delay: .4s;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate_logo {
+    0%   {  transform: scale(0); opacity: 0; }
+    100% {  transform: scale(.5); opacity: 1; }
+}

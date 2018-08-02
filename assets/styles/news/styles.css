@@ -1,0 +1,116 @@
+html, body {
+    /* background: url('../../images/bg_comment.jpg') no-repeat; */
+    background: transparent;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    position: relative;
+    font-family: Helvetica;
+}
+
+.panel {
+    width: 810px;
+    height: 130px;
+    position: absolute;
+    bottom: 200px;
+}
+
+.panel::after {
+    content: "";
+    width: 800px;
+    height: 120px;
+    position: absolute;
+    top: 5px;
+    z-index: 2;
+}
+
+.panel::before {
+    content: "";
+    width: 800px;
+    height: 120px;
+    position: absolute;
+    top: 5px;
+    z-index: 3;
+    opacity: 0.9;
+}
+
+.panelL {
+    background: linear-gradient(to left, rgba(20,79,159,1) 0%, rgba(20,79,159,1) 40%, rgba(20,79,159,1) 100%);
+    left: -875px;
+    transform: skewX(-44deg);
+    text-align: right;
+    z-index: 1;
+}
+
+
+.panelL::after {
+    left: 2px;
+    background: linear-gradient(to left, rgba(23,118,202,1) 0%,rgba(23,118,202,0.01) 100%);
+}
+
+.panelL::before {
+    left: 10px;
+    transform: skewX(44deg);
+}
+
+.text {
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.panelL .text {
+    transform: skewX(35deg);
+}
+
+.panelR .text {
+    transform: skewX(-35deg);
+}
+
+.name {
+    font-size: 70px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-shadow: 6px 6px #144f9e;
+    position: relative;
+    z-index: 3;
+}
+
+.panelL .name {
+    margin: 15px 45px 0 0;
+    left: -850px;
+    opacity: 0;
+}
+
+.footer {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+}
+
+.panelL .footer {
+    left: -875px;
+    background: linear-gradient(to left, rgba(20,79,159,1) 0%, rgba(20,79,159,1) 40%, rgba(20,79,159,0.05) 100%);
+}
+
+.footer .twitter {
+    font-size: 20px;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.panelL .footer .twitter {
+    margin: 10px 30px 0 0;
+    transform: skewX(44deg);
+    opacity: 0;
+}
+
+
+.panelL .footer .twitter:after {
+    left: -40px;
+}
+
+
