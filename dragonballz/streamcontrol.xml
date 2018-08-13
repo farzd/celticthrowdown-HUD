@@ -1,6 +1,6 @@
 <!DOCTYPE StreamControl>
 <items>
- <timestamp>14793356624135</timestamp>
+ <timestamp>1479335662413532</timestamp>
  <gameStatus>WINNERS SEMIS</gameStatus>
  <pCountry1>USA</pCountry1>
  <pCountry2>Japan</pCountry2>
@@ -8,5 +8,34 @@
  <pName2>Infiltration</pName2>
  <pScore1>1</pScore1>
  <pScore2>1</pScore2>
- <game></game>
+
+ <wa1>justin=1</wa1>
+ <wa2>infiltration=2</wa2>
+
+ <wb1>justin=1</wb1>
+ <wb2>infiltration=1</wb2> 
+
+ <wc1>justin=1</wc1>
+ <wc2>infiltration=1</wc2>  
+
+<wfinals1>justin=1</wfinals1>
+<wfinals2>infiltration=1</wfinals2> 
+
+ <la1>justin=1</la1>
+ <la2>infiltration=2</la2>
+
+ <lb1>justin=1</lb1>
+ <lb2>infiltration=2</lb2> 
+
+ <lc1>justin=1</lc1>
+ <lc2>infiltration=2</lc2>  
+
+ <ld1>justin=1</ld1>
+ <ld2>infiltration=2</ld2>
+
+  <lfinals1>justin=1</lfinals1>
+  <lfinals2>infiltration=2</lfinals2>     
+
+  <grandfinals1>justin=1</grandfinals1>
+  <grandfinals2>infiltration=2</grandfinals2> 
 </items>
