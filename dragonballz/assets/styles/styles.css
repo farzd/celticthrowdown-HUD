@@ -1,0 +1,118 @@
+html, body {
+    background: transparent;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    position: relative;
+    font-family: Helvetica;
+}
+
+#scoreVid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:1;
+}
+
+.panel {
+    width: 560px;
+    height: 45px;
+    position: absolute;
+    top: 2px;
+    z-index: 2;
+    color: #fff;
+    font-size: 50px;
+    font-family: 'PosterBrushSlanted';
+    opacity: 0;
+}
+
+.panelL {
+    left: 250px;
+    text-align: right;
+}
+
+.panelR {
+    right: 250px;
+    text-align: left;
+}
+
+.score {
+    width: 50px;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.name {
+    letter-spacing: 3px;
+}
+
+.panelR .name {
+    margin-left: 30px;
+}
+.panelL .name {
+    margin-right: 30px;
+}
+
+.panelT {
+    width: 284px;
+    height: 38px;
+    position: absolute;
+    top: 4px;
+    left: 820px;
+    z-index: 3;
+    color: #fff;
+    font-size: 35px;
+    font-family: 'PosterBrushSlanted';
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.flag {
+    position: absolute;
+    top: 2px;
+}
+
+.panelL .flag {
+    left: 20px;
+}
+
+.panelR .flag {
+    right: 20px;
+}
+
+.fade {
+    animation: fade 2s;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+    0%   {  opacity: 0;}
+    100% {   opacity: 1;}
+}
+
+.logo {
+    position: absolute;
+    bottom: 10px;
+    left: 900px;
+    opacity: 0;
+}
+
+.logo.animate_logo {
+    animation: animate_logo 6s;
+    animation-delay: 3s;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate_logo {
+    0%   { opacity: 0; }
+    10%   { opacity: 1; }
+    20%   { transform: rotateY(0deg); opacity: 1;}
+    50% {  transform: rotateY(180deg);  opacity: 1;}
+    80% {  transform: rotateY(0deg); opacity: 1; }
+    100%   { opacity: 0.7; }
+}

@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'kimberly';
+  font-style: normal;
+  font-weight: normal;
+  src: url('kimberly.woff') format('woff2');
+}
+
+@font-face {
+  font-family: 'teko';
+  font-style: normal;
+  font-weight: normal;
+  src: url('teko.woff') format('woff2');
+}
+
+
+@font-face {
+  font-family: 'PosterBrushSlanted';
+  font-style: normal;
+  font-weight: normal;
+  src: url('PosterBrushSlanted.woff') format('woff2');
+}
